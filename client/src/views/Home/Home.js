@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../assets/logo.svg';
 import './Home.css';
+import LoginButton from '../../components/Auth/LoginButton'
 
 function Home() {
     return (
@@ -17,6 +18,7 @@ function Home() {
                     rel="noopener noreferrer"
                 >
                 </a>
+                <LoginButton></LoginButton>
             </header>
         </div>
     );
