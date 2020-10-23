@@ -7,7 +7,7 @@ import NotFound from "./views/NotFound"
 import Header from "./components/Header/Header"
 
 
-const App = () => {
+const App = () => { //Git test
   return (
     <div>
       <Header />
