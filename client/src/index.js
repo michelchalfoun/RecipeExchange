@@ -6,12 +6,14 @@ import App from './App';
 import * as config from "./utils/authConfig.json";
 import { Auth0Provider } from "@auth0/auth0-react";
 
+
 ReactDOM.render(
     <Router>
         <Auth0Provider
             domain={config.domain}
             clientId={config.clientId}
-            redirectUri={window.location.origin}
+            //Go to utils/authConfig.js and change the redirectURI to change the page that the user is brought to when first logged in.
+            redirectUri={config.redirectURI}
         >
             <App />
         </Auth0Provider>
