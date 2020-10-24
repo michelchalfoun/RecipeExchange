@@ -1,5 +1,6 @@
 {
     "domain": "dev-om66vq6u.us.auth0.com",
     "clientId": "Q2eGwB4n3T9Sv84Um613hCYBmueER1I6",
-    "audience": "https://dev-om66vq6u.us.auth0.com/api/v2/"
+    "audience": "https://dev-om66vq6u.us.auth0.com/api/v2/",
+    "redirectURI" : "http://localhost:3000/Profile"
 }

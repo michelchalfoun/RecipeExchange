@@ -2,6 +2,8 @@ import React from 'react';
 import logo from '../../assets/logo.svg';
 import './Home.css';
 import LoginButton from '../../components/Auth/LoginButton'
+import SignupButton from '../../components/Auth/SignupButton'
+import AuthenticationButton from '../../components/Auth/AuthenticationButton';
 
 function Home() {
     return (
@@ -11,14 +13,7 @@ function Home() {
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                </a>
-                <LoginButton></LoginButton>
+                <AuthenticationButton></AuthenticationButton>
             </header>
         </div>
     );
