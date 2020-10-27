@@ -6,6 +6,7 @@ import Login from "./views/Login/Login"
 import Profile from "./views/Profile/Profile"
 import NotFound from "./views/NotFound"
 import Header from "./components/Header/Header"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const App = () => { //Git test
