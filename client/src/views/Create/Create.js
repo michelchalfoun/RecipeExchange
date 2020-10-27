@@ -1,16 +1,16 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap'
 
-function Profile() {
+function Create() {
     return (
         <div >
             <Jumbotron>
-                <h1>Hello, user!</h1>
-                <p>You are currently logged in and this is your profile page.</p>
+                <h1>Create Page</h1>
+                <p>This is where you will create your recipes.</p>
                 <Button href="/Home" variant="primary">Go back home</Button>
             </Jumbotron>
         </div>
     );
 }
 
-export default Profile;
+export default Create;

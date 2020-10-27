@@ -1,21 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AuthenticationButton from '../Auth/AuthenticationButton';
-import './Header.css';
+import { Nav, Form, FormControl, Button } from 'react-bootstrap'
+import Navbar from 'react-bootstrap/Navbar'
 
 const Header = () => {
     return (
         <div className='topnav'>
-            {/* Logo */}
-            <Link id="logo-link" to="/">
-                <img className="topnav-logo" src={ "/logo192.png" } alt="React logo" />
-            </Link>
-
-            {/* Page Links */}
-            <div className="topnav-right">
-                <Link className="topnav-link" to='/Home'>Home</Link>
-                <AuthenticationButton></AuthenticationButton>
-            </div>
+            <Navbar bg="light" expand="lg" sticky="top">
+                <Navbar.Brand href="/Home">Recipe Exchange</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link href="/Home">Home</Nav.Link>
+                        <Nav.Link href="/Favorite">Favorite</Nav.Link>
+                        <Nav.Link href="/Donate">Donate</Nav.Link>
+                        <Nav.Link href="/Create">Create</Nav.Link>
+                        <Nav.Link href="/Search">Search</Nav.Link>
+                    </Nav>
+                    <Nav inline>
+                        <Nav.Link className="mr-auto" href="/Profile">My Profile</Nav.Link>
+                        <AuthenticationButton></AuthenticationButton>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         </div>
     )
 }
