@@ -1,9 +1,6 @@
 import React from 'react';
 import logo from '../../assets/social-media-icons/042-world grid.svg';
 import './Home.css';
-import LoginButton from '../../components/Auth/LoginButton'
-import SignupButton from '../../components/Auth/SignupButton'
-import AuthenticationButton from '../../components/Auth/AuthenticationButton';
 
 function Home() {
     return (

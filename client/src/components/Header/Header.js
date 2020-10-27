@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import AuthenticationButton from '../Auth/AuthenticationButton';
-import { Nav, Form, FormControl, Button } from 'react-bootstrap'
+import { Nav } from 'react-bootstrap'
 import Navbar from 'react-bootstrap/Navbar'
 
 const Header = () => {
