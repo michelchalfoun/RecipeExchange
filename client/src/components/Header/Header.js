@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar'
 const Header = () => {
     return (
         <div className='topnav'>
-            <Navbar bg="light" expand="lg" fixed="top">
+            <Navbar bg="light" expand="lg" sticky="top">
                 <Navbar.Brand href="/Home">Recipe Exchange</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
