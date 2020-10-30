@@ -4,6 +4,8 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const Recipe = require('./models/recipe.model');
 const recipeRouter = require('./routes/recipe.routes');
+const User = require('./models/user.model');
+const userRouter = require('./routes/user.routes');
 
 
 //Database setup (Dallas)
@@ -21,6 +23,7 @@ const port = process.env.PORT || 5000;
 const app = express.init()
 app.use(bodyParser.urlencoded({extended : false }));
 app.use(cors());
-app.use('/add-post', recipeRouter);
+app.use('/Create', recipeRouter);
+app.use('/Signup', userRouter);
 
 app.listen(port, () => console.log(`Server now running on port ${port}!`));

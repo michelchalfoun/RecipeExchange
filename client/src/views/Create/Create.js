@@ -8,7 +8,7 @@ function Create() {
             <Jumbotron>
                 <h1>Create Page</h1>
                 <p>This is where you will create your recipes.</p>
-                <form method="POST" action="/add-post" id="recipeinput">
+                <form method="POST" action="/Create" id="recipeinput">
                     <label>Title:</label>
                     <br></br>
                     <input type="text" name="title" required></input>
@@ -16,6 +16,8 @@ function Create() {
                     <label>Description:</label>
                     <br></br>
                         <textarea type="text" name="body"></textarea>
+                    <br></br>
+                    <label>Estimated Cook Time:</label>
                     <br></br>
                     <select id="cooktime" form="recipeinput" type="number" name="cooktime">
                         <option value="30" label="30 Minutes or Less"></option>
@@ -25,8 +27,17 @@ function Create() {
                         <option value="10000" label="One Day or Longer"></option>
                     </select>
                     <br></br>
-                    <input type="submit" value="Post"></input>
+                    <label>Ingredients:</label>
+                    <br></br>
+                        <textarea type="text" name="ingredients"></textarea>
+                    <br></br>
+                    <label>Instructions:</label>
+                    <br></br>
+                        <textarea type="text" name="instructions"></textarea>
+                    <br></br>
+                    <input type="submit" value="Post Recipe" className="submitButton"></input>
                 </form>
+                <br></br>
                 <Button href="/Home" variant="primary">Go back home</Button>
             </Jumbotron>
         </div>
