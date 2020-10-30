@@ -1,5 +1,9 @@
 const express = require('./config/express.js')
 const mongoose = require('mongoose');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const Recipe = require('./models/recipe.model');
+const recipeRouter = require('./routes/recipe.routes');
 
 
 //Database setup (Dallas)
@@ -15,4 +19,8 @@ connection.once('open', () => {
 const port = process.env.PORT || 5000;
 
 const app = express.init()
+app.use(bodyParser.urlencoded({extended : false }));
+app.use(cors());
+app.use('/add-post', recipeRouter);
+
 app.listen(port, () => console.log(`Server now running on port ${port}!`));
