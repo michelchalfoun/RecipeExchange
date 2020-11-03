@@ -3,7 +3,12 @@ const path = require('path'),
     mongoose = require('mongoose'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
-    exampleRouter = require('../routes/examples.server.routes');
+    cors = require('cors'),
+    //Recipe = require('./models/recipe.model'),
+    recipeRouter = require('./routes/recipe.routes'),
+    User = require('./models/user.model'),
+    userRouter = require('./routes/user.routes');
+
 
 module.exports.init = () => {
     /* 
@@ -25,8 +30,11 @@ module.exports.init = () => {
     // body parsing middleware
     app.use(bodyParser.json());
 
+    app.use(cors());
+
     // add a router
-    app.use('/api/example', exampleRouter);
+    app.use('/Create', recipeRouter);
+    app.use('/Signup', userRouter);
 
     if (process.env.NODE_ENV === 'production') {
         // Serve any static files

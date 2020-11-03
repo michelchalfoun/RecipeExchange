@@ -14,7 +14,7 @@ const Header = () => {
                         <Nav.Link href="/Home">Home</Nav.Link>
                         <Nav.Link href="/Favorite">Favorite</Nav.Link>
                         <Nav.Link href="/Donate">Donate</Nav.Link>
-                        <Nav.Link href="/Create">Create</Nav.Link>
+                        <Nav.Link href="/CreateRecipe">Create</Nav.Link>
                         <Nav.Link href="/Search">Search</Nav.Link>
                     </Nav>
                     <Nav inline>
