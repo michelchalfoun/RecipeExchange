@@ -1,5 +1,6 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap'
+import SimpleMap from'../../components/GoogleMap/GoogleMap'
 
 function Donate() {
     return (
@@ -9,6 +10,7 @@ function Donate() {
                 <p>This is where you will see all the nearby charities.</p>
                 <Button href="/Home" variant="primary">Go back home</Button>
             </Jumbotron>
+            <SimpleMap></SimpleMap>
         </div>
     );
 }
