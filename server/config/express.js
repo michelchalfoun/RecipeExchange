@@ -3,7 +3,12 @@ const path = require('path'),
     mongoose = require('mongoose'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
-    exampleRouter = require('../routes/examples.server.routes');
+    cors = require('cors'),
+
+    //Import relevant routers here
+    recipeRouter = require('../routes/recipe.routes'),
+    userRouter = require('../routes/user.routes');
+
 
 module.exports.init = () => {
     /* 
@@ -12,7 +17,14 @@ module.exports.init = () => {
     */
     mongoose.connect(process.env.DB_URI || require('./config').db.uri, {
         useNewUrlParser: true
-    });
+    }).then(() => {
+        console.log('Database connected sucessfully !')
+    },
+        error => {
+            console.log('Database could not be connected : ' + error)
+        }
+    )
+
     mongoose.set('useCreateIndex', true);
     mongoose.set('useFindAndModify', false);
 
@@ -24,9 +36,14 @@ module.exports.init = () => {
 
     // body parsing middleware
     app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({
+        extended: true
+    }));
+    app.use(cors());
 
     // add a router
-    app.use('/api/example', exampleRouter);
+    app.use('/posts', recipeRouter);
+    app.use('/users', userRouter);
 
     if (process.env.NODE_ENV === 'production') {
         // Serve any static files
