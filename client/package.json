@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "google-map-react": "^2.1.9",
     "install": "^0.13.0",

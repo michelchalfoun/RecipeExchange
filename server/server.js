@@ -1,8 +1,4 @@
 const express = require('./config/express.js')
-const Recipe = require('./models/recipe.model');
-const recipeRouter = require('./routes/recipe.routes');
-const User = require('./models/user.model');
-const userRouter = require('./routes/user.routes');
 
 
 // Database setup (Dallas)

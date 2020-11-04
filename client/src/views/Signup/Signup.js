@@ -1,16 +1,14 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap'
 import { useAuth0 } from '@auth0/auth0-react';
+import CreateUser from '../../components/Users/create-user.component'
 
 function Signup() {
     const { user, isAuthenticated } = useAuth0();
     const emailString = user.email
     return (
         <div >
-            <h1 >
-                    Signup Page
-            </h1>
-            <form method="POST" action="/Signup" id="userinput">
+            {/* <form method="POST" action="/Signup" id="userinput">
                 <label>Email:</label>
                 <br></br>
                 <input type="text" name="email" value="testemail" readOnly></input>
@@ -19,8 +17,14 @@ function Signup() {
                 <input type="text" name="username" required></input>
                 <br></br>
                 <input type="submit" value="SetUsername" className="submitButton"></input>
-            </form>
-        </div>
+            </form>*/}
+            <Jumbotron>
+            <h1>
+                    Signup Page
+            </h1>
+                <CreateUser></CreateUser>
+            </Jumbotron>
+        </div> 
     );
 }
 
