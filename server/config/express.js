@@ -5,9 +5,9 @@ const path = require('path'),
     bodyParser = require('body-parser'),
     cors = require('cors'),
     //Recipe = require('./models/recipe.model'),
-    recipeRouter = require('./routes/recipe.routes'),
+    recipeRouter = require('../routes/recipe.routes'),
     User = require('./models/user.model'),
-    userRouter = require('./routes/user.routes');
+    userRouter = require('../routes/user.routes');
 
 
 module.exports.init = () => {
