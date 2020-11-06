@@ -7,9 +7,6 @@ class SimpleMap extends Component {
 
     constructor(props) {
         super(props)
-
-        //this.getCharities = this.getCharities.bind(this);
-
         this.state = {
             isLoading: false,
             charities: [],
@@ -75,7 +72,7 @@ class MapMarker extends React.Component {
 
         return (
             <div style={{ cursor: "pointer" }} key={this.props.key}>
-                <i onClick={openCharity} class="building icon" size="large"></i>
+                <i onClick={openCharity} class="building icon"></i>
             </div>
         )
     }
