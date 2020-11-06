@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import axios from 'axios';
+import { Icon } from 'semantic-ui-react'
 
 
 class SimpleMap extends Component {
@@ -72,7 +73,7 @@ class MapMarker extends React.Component {
 
         return (
             <div style={{ cursor: "pointer" }} key={this.props.key}>
-                <i onClick={openCharity} class="building icon"></i>
+                <i onClick={openCharity} class="blue large building icon"></i>
             </div>
         )
     }
