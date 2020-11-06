@@ -22,10 +22,7 @@ class SimpleMap extends Component {
             radius: '5000',
             keyword: 'charities'
         }
-        const headers = {
-            'Access-Control-Allow-Origin': '*'
-        }
-        axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json', { params: params }, { headers: headers })
+        axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json', { params: params })
             .then((res) => {
                 this.state.charities = res.data.results
                 this.setState({ isLoading: false })
