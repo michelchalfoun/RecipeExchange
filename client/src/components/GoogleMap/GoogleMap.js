@@ -1,33 +1,28 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import axios from 'axios';
-import { Icon } from 'semantic-ui-react'
-
 
 class SimpleMap extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            isLoading: false,
+            isLoading: true,
             charities: [],
         }
     }
 
     componentDidMount() {
         this.setState({ isLoading: true })
-        const params = {
-            key: 'AIzaSyDOH-pA2icLq8Lcwmqr0gqtUDCvRkc3LVw',
-            location: '29.6345,-82.3371',
-            radius: '5000',
-            keyword: 'charities'
-        }
-        axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json', { params: params })
+        console.log('LMAO')
+        axios.get('http://localhost:5000/charity/getCharities')
             .then((res) => {
-                this.state.charities = res.data.results
+                this.setState({ charities: res.data })
                 this.setState({ isLoading: false })
+                console.log('success')
             }).catch((error) => {
                 console.log(error)
+                console.log('error')
             });
     }
 
