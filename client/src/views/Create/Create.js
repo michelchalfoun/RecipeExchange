@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron, Button } from 'react-bootstrap'
+import { Jumbotron } from 'react-bootstrap'
 import "./Create.css"
 import CreatePost from "../../components/Posts/create-post.component"
 

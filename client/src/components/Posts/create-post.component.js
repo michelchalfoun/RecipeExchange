@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Jumbotron } from 'react-bootstrap'
 
 export default class CreatePost extends Component {
 
