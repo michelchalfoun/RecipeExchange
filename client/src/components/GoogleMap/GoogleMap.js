@@ -19,10 +19,8 @@ class SimpleMap extends Component {
             .then((res) => {
                 this.setState({ charities: res.data })
                 this.setState({ isLoading: false })
-                console.log('success')
             }).catch((error) => {
                 console.log(error)
-                console.log('error')
             });
     }
 
