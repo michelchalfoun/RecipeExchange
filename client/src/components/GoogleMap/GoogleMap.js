@@ -43,15 +43,9 @@ class SimpleMap extends Component {
                 });
 
         }.bind(this))
-
-
     }
 
-
-
     render() {
-        console.log('render')
-        console.log(this.state.coordinates)
         return (
             <div style={{ height: '100vh', width: '100%' }}>
                 {!this.state.isLoading && (
