@@ -1,48 +1,49 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import { Spinner } from 'react-bootstrap'
 import axios from 'axios';
-
 
 class SimpleMap extends Component {
 
     constructor(props) {
         super(props)
-
-        //this.getCharities = this.getCharities.bind(this);
-
         this.state = {
-            isLoading: false,
+            isLoading: true,
             charities: [],
+            coordinates: {
+                lat: 0,
+                lng: 0
+            }
         }
     }
 
     componentDidMount() {
         this.setState({ isLoading: true })
-        const params = {
-            key: 'AIzaSyDOH-pA2icLq8Lcwmqr0gqtUDCvRkc3LVw',
-            location: '29.6345,-82.3371',
-            radius: '5000',
-            keyword: 'charities'
-        }
-        const headers = {
-            'Access-Control-Allow-Origin': '*'
-        }
-        axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json', { params: params }, { headers: headers })
-            .then((res) => {
-                this.state.charities = res.data.results
-                this.setState({ isLoading: false })
-            }).catch((error) => {
-                console.log(error)
-            });
-    }
 
-    static defaultProps = {
-        center: {
-            lat: 29.6345,
-            lng: -82.3371
-        },
-        zoom: 15
-    };
+        navigator.geolocation.getCurrentPosition(function (position) {
+            this.setState({
+                coordinates: {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                }
+            })
+            axios.get('http://localhost:5000/charity/getCharities',
+                {
+                    params: {
+                        coordinates: String(position.coords.latitude) + ',' + String(position.coords.longitude)
+                    }
+                })
+                .then((res) => {
+                    this.setState({
+                        charities: res.data,
+                        isLoading: false
+                    })
+                }).catch((error) => {
+                    console.log(error)
+                });
+
+        }.bind(this))
+    }
 
     render() {
         return (
@@ -50,14 +51,22 @@ class SimpleMap extends Component {
                 {!this.state.isLoading && (
                     <GoogleMapReact
                         bootstrapURLKeys={{ key: 'AIzaSyDOH-pA2icLq8Lcwmqr0gqtUDCvRkc3LVw' }}
-                        defaultCenter={this.props.center}
-                        defaultZoom={this.props.zoom}
+                        defaultCenter={this.state.coordinates}
+                        defaultZoom={15}
                     >
                         {this.state.charities.map(item => <MapMarker key={item.place_id} place_id={item.place_id} lat={item.geometry.location.lat} lng={item.geometry.location.lng} text={item.name} />)}
                     </GoogleMapReact>
                 )}
                 {this.state.isLoading && (
-                    <h1>Loading</h1>
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                    }}>
+                        <Spinner animation="border" role="status" >
+                            <span className="sr-only">Loading...</span>
+                        </Spinner>
+                    </div>
                 )}
             </div>
         );
@@ -75,7 +84,7 @@ class MapMarker extends React.Component {
 
         return (
             <div style={{ cursor: "pointer" }} key={this.props.key}>
-                <i onClick={openCharity} class="building icon" size="large"></i>
+                <i onClick={openCharity} class="blue large building icon"></i>
             </div>
         )
     }

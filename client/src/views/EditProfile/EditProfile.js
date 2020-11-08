@@ -1,15 +1,15 @@
 import React from "react";
 import { Jumbotron, Button } from "react-bootstrap";
-import { useAuth0 } from "@auth0/auth0-react";
+//import { useAuth0 } from "@auth0/auth0-react";
 
 function EditProfile() {
 
-      const { user, isAuthenticated } = useAuth0();
+      //const { user, isAuthenticated } = useAuth0();
 
-      let email;
-      if (isAuthenticated) {
-        email = user.email;
-      }
+      // let email;
+      // if (isAuthenticated) {
+      //   email = user.email;
+      // }
 
 
   return (

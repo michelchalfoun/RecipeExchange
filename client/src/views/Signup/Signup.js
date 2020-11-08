@@ -1,11 +1,11 @@
 import React from 'react';
-import { Jumbotron, Button } from 'react-bootstrap'
-import { useAuth0 } from '@auth0/auth0-react';
+import { Jumbotron } from 'react-bootstrap'
+//import { useAuth0 } from '@auth0/auth0-react';
 import CreateUser from '../../components/Users/create-user.component'
 
 function Signup() {
-    const { user, isAuthenticated } = useAuth0();
-    const emailString = user.email
+    //const { user } = useAuth0();
+    //const emailString = user.email
     return (
         <div >
             {/* <form method="POST" action="/Signup" id="userinput">

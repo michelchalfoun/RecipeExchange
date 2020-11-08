@@ -7,7 +7,8 @@ const path = require('path'),
     
     //Import relevant routers here
     recipeRouter = require('../routes/recipe.routes'),
-    userRouter = require('../routes/user.routes');
+    userRouter = require('../routes/user.routes'),
+    charityRouter = require('../routes/charity.routes');
 
 
 module.exports.init = () => {
@@ -44,6 +45,7 @@ module.exports.init = () => {
     // add a router
     app.use('/posts', recipeRouter);
     app.use('/users', userRouter);
+    app.use('/charity', charityRouter);
 
     if (process.env.NODE_ENV === 'production') {
         // Serve any static files
