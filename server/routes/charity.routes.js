@@ -10,7 +10,6 @@ router.route('/getCharities').get((request, response) => {
         radius: '5000',
         keyword: 'charity'
     }
-    console.log(request)
     axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json', { params: params })
             .then((res) => {
                 response.send(res.data.results)
