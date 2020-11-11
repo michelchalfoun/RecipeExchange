@@ -55,7 +55,7 @@ export default class CreatePost extends Component {
             instructions: this.state.instructions,
         };
 
-        axios.post('http://localhost:5000/posts/create', recipeObject)
+        axios.post('/posts/create', recipeObject)
             .then((res) => {
                 console.log(res.data)
             }).catch((error) => {
