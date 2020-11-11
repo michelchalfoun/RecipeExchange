@@ -17,7 +17,8 @@ module.exports.init = () => {
         - reference README for db uri
     */
     mongoose.connect(process.env.DB_URI || require('./config').db.uri, {
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useUnifiedTopology: true
     }).then(() => {
         console.log('Database connected sucessfully !')
     },
