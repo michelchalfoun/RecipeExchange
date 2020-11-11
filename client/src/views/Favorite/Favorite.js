@@ -1,14 +1,38 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap'
+import Card from "../../components/Card/Card"
+import './Favorite.css';
 
 function Favorite() {
     return (
-        <div >
-            <Jumbotron>
-                <h1>Favorite Page</h1>
-                <p>This is where you will see the recipes you saved.</p>
-                <Button href="/Home" variant="primary">Go back home</Button>
-            </Jumbotron>
+        <div className = "App">
+
+        {/*statement  at top*/}
+
+ 			<div className="Header" >
+                <p id = "BigText">
+                    Come back to your favourite recipes anytime.
+                </p>
+            </div>
+
+            <div className="Border">
+                <p>
+                aaaa
+                </p>
+            </div>
+
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+
+            <div className="Border">
+                <p>
+                aaaa
+                </p>
+            </div>
+
         </div>
     );
 }
