@@ -1,0 +1,57 @@
+
+.Recipe{
+   /*background-color: #f3eac2; */
+   height: auto;
+   align-items: flex;
+   padding: 20px 50px;
+   text-align: left;
+}
+
+#Title{
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 40px;
+    color: #321f28;
+}
+
+#Diff{
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 25px;
+    color: #321f28;
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+}
+
+#Time{
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 25px;
+    color: #321f28;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+}
+
+#Description{
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 25px;
+    color: #321f28;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+}
+
+#cheese {
+    display: inline-flex;
+    width: 300px;
+}
+
+#Recipeinfo {
+    display: inline-flex;
+    vertical-align: top;
+    margin-left: 40px;
+    position: relative;
+    text-align: justify;
+    width: 60%;
+}
