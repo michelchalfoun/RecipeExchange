@@ -5,10 +5,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import * as config from "./utils/authConfig.json";
 import { Auth0Provider } from "@auth0/auth0-react";
+import createHistory from './utils/history';
 
+const history = createHistory;
 
 ReactDOM.render(
-    <Router>
+    <Router history={history}>
         <Auth0Provider
             domain={config.domain}
             clientId={config.clientId}

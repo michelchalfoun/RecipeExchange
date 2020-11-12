@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Jumbotron } from 'react-bootstrap'
 import "./Create.css"
 import CreatePost from "../../components/Posts/create-post.component"
+import { useAuth0 } from "@auth0/auth0-react"
 
 function Create() {
     return (
@@ -67,6 +68,7 @@ function Create() {
                 </p>
             </div>
         </div>
+
 
     );
 }
