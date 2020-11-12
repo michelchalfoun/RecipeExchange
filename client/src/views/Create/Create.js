@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Jumbotron } from 'react-bootstrap'
 import "./Create.css"
 import CreatePost from "../../components/Posts/create-post.component"
+import { useAuth0 } from "@auth0/auth0-react"
 
 function Create() {
     return (
@@ -49,7 +50,8 @@ function Create() {
                 </p>
                  <p>
                     Fill in the details of your recipe below! 
-                </p>     
+                </p> 
+                <h4>All fields marked with * are required.</h4>    
            </div>
 
             <div className="Border">
@@ -67,6 +69,7 @@ function Create() {
                 </p>
             </div>
         </div>
+            
 
     );
 }

@@ -15,6 +15,16 @@ router.route('/').get((req, res) => {
     })
 })
 
+router.route('/:email').get( async (req, res) => {
+    user.findOne( {email: req.params.email }, (error, data) => {
+        if (error) {
+            return next(error)
+        } else {
+            res.json(data)
+        }
+    })
+})
+
 router.route('/create').post((req, res, next) => {
     user.create(req.body, (error, data) => {
         if (error) {
@@ -26,8 +36,8 @@ router.route('/create').post((req, res, next) => {
     })
 });
 
-router.route('/edit/:id').get((req, res) => {
-    user.findById(req.params.id, (error, data) => {
+router.route('/edit/:email').put( async (req, res) => {
+    user.updateOne({email: req.params.email}, {$set: {school: req.body.school, diet: req.body.diet, bio: req.body.bio}}, (error, data) => {
         if (error) {
             return next(error)
         } else {
