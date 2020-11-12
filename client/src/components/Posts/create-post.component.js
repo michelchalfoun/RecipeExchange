@@ -35,7 +35,15 @@ function CreatePost() {
     return (
         <div className="wrapper">
             <form onSubmit={onSubmit}>
+
+            {/*title and cook time*/}
+
                 <div className="form-group">
+<<<<<<< HEAD
+                    <label className = "label">Title: *</label>
+                    <input type="text" value={postInfo.title} onChange={e => setPostInfo({...postInfo, title: e.target.value, author: user.name})} className="titlebox" required />
+                    <label className = "label">Estimated Prep/Cook Time: *</label>
+=======
                     <label className>Title: *</label>
                     <input type="text" value={postInfo.title} onChange={e => setPostInfo({...postInfo, title: e.target.value, author: user.name})} className="titlebox" required />
                 </div>
@@ -45,8 +53,9 @@ function CreatePost() {
                 </div>
                 <div className="form-group">
                     <label>Estimated Prep/Cook Time: *</label>
+>>>>>>> f35c3a38dba9a4dfe1e035001701f5b658a28b48
                     <div>
-                        <select className="dropdown-toggle" id="cooktime" form="recipeinput" type="number" name="cooktime" value={postInfo.estimateTime} onChange={e => setPostInfo({...postInfo, estimateTime: e.target.value})}>
+                        <select className="dropdown" id="cooktime" form="recipeinput" type="number" name="cooktime" value={postInfo.estimateTime} onChange={e => setPostInfo({...postInfo, estimateTime: e.target.value})}>
                             <option value="5-10 Minutes" label="5-10 Minutes"></option>
                             <option value="10-15 Minutes" label="10-15 Minutes"></option>
                             <option value="20-30 Minutes" label="20-30 Minutes"></option>
@@ -55,6 +64,26 @@ function CreatePost() {
                         </select>
                     </div>
                 </div>
+<<<<<<< HEAD
+
+            {/*Description*/}
+
+                <div className="form-group2">
+                    <label>Description: *</label>
+                    <textarea value={postInfo.description} onChange={e => setPostInfo({...postInfo, description: e.target.value})} className="longtextbox" required/>
+                </div>
+
+            {/*Ingredients*/}
+                <div className="form-group2">
+                    <label>Ingredients: *</label>
+                    <textarea value={postInfo.ingredient} onChange={e => setPostInfo({...postInfo, ingredients: e.target.value})} className="longtextbox" required/>
+                </div>
+
+            {/*Instructions*/}
+                <div className="form-group2">
+                    <label>Instructions: *</label>
+                    <textarea value={postInfo.instructions} onChange={e => setPostInfo({...postInfo, instructions: e.target.value})} className="longtextbox" required/>
+=======
                 <div className="form-group2">
                     <label>Ingredients: *</label>
                     <input type="text" value={postInfo.ingredient} onChange={e => setPostInfo({...postInfo, ingredients: e.target.value})} className="longtextbox" required/>
@@ -62,7 +91,10 @@ function CreatePost() {
                 <div className="form-group2">
                     <label>Instructions: *</label>
                     <input type="text" value={postInfo.instructions} onChange={e => setPostInfo({...postInfo, instructions: e.target.value})} className="longtextbox" required/>
+>>>>>>> f35c3a38dba9a4dfe1e035001701f5b658a28b48
                 </div>
+
+            {/*Submit*/}
                 <div className="form-group">
                     <input type="submit" value="Create Recipe" className="bttn" />
                 </div>
