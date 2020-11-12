@@ -9,7 +9,7 @@ function SinglePost() {
     const [postData, setPostData] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/posts/' + postID)
+        axios.get('/posts/' + postID)
             .then(res => {
                 if (res.data != null) {
                     setPostData(res.data);

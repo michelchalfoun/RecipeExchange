@@ -10,7 +10,7 @@ export default class DisplayPosts extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/posts')
+        axios.get('/posts')
             .then(res => {
                 this.setState({ postsCollection: res.data });
             })
