@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './create-post.component.css'
 
 export default class CreatePost extends Component {
 
@@ -77,18 +78,12 @@ export default class CreatePost extends Component {
         return (
             <div className="wrapper">
                 <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
-                        <label>Title:</label>
-                        <input type="text" value={this.state.title} onChange={this.onChangeTitle} className="form-control" />
-                    </div>
-                    <div className="form-group">
-                        <label>Description:</label>
-                        <input type="text" value={this.state.description} onChange={this.onChangeDescription} className="form-control" />
-                    </div>
-                    <div className="form-group">
-                        <label>Estimated Prep/Cook Time:</label>
+                    <div className="form-group"> {/*title and cook time*/}
+                        <label className="label">Title:</label>
+                        <input type="text" value={this.state.title} onChange={this.onChangeTitle} className="titlebox" />
+                        <label className="label">Estimated Prep/Cook Time:</label>
                         <div>
-                            <select className="dropdown-toggle" id="cooktime" form="recipeinput" type="number" name="cooktime" value={this.state.estimateTime} onChange={this.onChangeEstimateTime}>
+                            <select className="dropdown" id="cooktime" form="recipeinput" type="number" name="cooktime" value={this.state.estimateTime} onChange={this.onChangeEstimateTime}>
                                 <option value="5-10 Minutes" label="5-10 Minutes"></option>
                                 <option value="10-15 Minutes" label="10-15 Minutes"></option>
                                 <option value="20-30 Minutes" label="20-30 Minutes"></option>
@@ -97,17 +92,32 @@ export default class CreatePost extends Component {
                             </select>
                         </div>
                     </div>
-                    <div className="form-group">
-                        <label>Ingredients:</label>
-                        <input type="text" value={this.state.ingredients} onChange={this.onChangeIngredients} className="form-control" />
+
+                {/*Description*/}
+                    <div className="form-group2">
+                        <label className= "label">Description:</label>
+                        <textarea value={this.state.description} onChange={this.onChangeDescription} className="longtextbox" />
                     </div>
                     <div className="form-group">
-                        <label>Instructions:</label>
-                        <input type="text" value={this.state.instructions} onChange={this.onChangeInstructions} className="form-control" />
+                        
+                {/*Ingredients*/}
                     </div>
+                    <div className="form-group2">
+                        <label className= "label">Ingredients:</label>
+                        <textarea value={this.state.ingredients} onChange={this.onChangeIngredients} className="longtextbox" />
+                    </div>
+
+                {/*Instructions*/}
+                    <div className="form-group2">
+                        <label className= "label">Instructions:</label>
+                        <textarea value={this.state.instructions} onChange={this.onChangeInstructions} className="longtextbox" />
+                    </div>
+
+                {/*Submit*/}
                     <div className="form-group">
-                        <input type="submit" value="Create Recipe" className="btn btn-success btn-block" />
+                        <input type="submit" value="Create Recipe" className="bttn" />
                     </div>
+
                 </form>
             </div>
             

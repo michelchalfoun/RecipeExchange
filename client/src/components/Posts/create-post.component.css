@@ -1,0 +1,73 @@
+
+.wrapper{
+   background-color: #f5b461;
+   height: auto;
+   width: 100%;
+   align-items: flex;
+   padding: 20px 50px;
+   text-align: left;
+}
+
+.label{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-group{
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 30px;
+    color: #321f28;
+    font-weight: bold;
+    display: flex;
+    padding: 10px 0;
+}
+
+.titlebox{
+    background-color: #f3eac2;
+    margin: 0 20px;
+    height: 40px;
+    flex-grow: 1;
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 20px;
+    color: #321f28;
+}
+
+.dropdown{
+    background-color: #f3eac2;
+    margin: 0 20px;
+    height: 40px;
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 20px;
+    color: #321f28;
+}
+
+.form-group2{
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 30px;
+    color: #321f28;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.longtextbox{
+    background-color: #f3eac2;
+    margin-top: 10px;
+    height: 300px;
+    width: 100%;
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 20px;
+    color: #321f28;
+    overflow: visible;
+    overflow-y: scroll;
+}
+
+.bttn{
+    background-color: #9ad3bc;
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 20px;
+    font-weight: bold;
+    color: #321f28;
+    padding: 20px 50px;
+
+}
+

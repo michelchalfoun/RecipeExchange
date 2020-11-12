@@ -42,14 +42,31 @@ function Create() {
         //         <Button href="/Home" variant="primary">Go back home</Button>
         //     </Jumbotron>
         // </div>
-        <Jumbotron>
-            <div className="Create">
-                <h1>Create a Recipe Post:</h1>
-                <p>Fill in the details of your recipe below!</p>
+        <div className = "App2">
+            <div className="Header" >
+                <p>
+                    Create a Recipe Post
+                </p>
+                 <p>
+                    Fill in the details of your recipe below! 
+                </p>     
+           </div>
+
+            <div className="Border">
+                <p>
+                aaaa
+                </p>
             </div>
-            <hr></hr>
-            <CreatePost> </CreatePost>
-        </Jumbotron>
+
+            <CreatePost>
+            </CreatePost>
+
+            <div className="Border">
+                <p>
+                aaaa
+                </p>
+            </div>
+        </div>
 
     );
 }
