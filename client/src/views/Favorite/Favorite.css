@@ -36,26 +36,6 @@
     color: #321f28;
 }
 
-.Charity {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #f5b461;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    color: #321f28;
-    
-}
-
-#fieldnfork {
-    display: block;
-    margin: 0 auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 .Link {
     color: white;
     background-color: #321f28;
@@ -63,28 +43,4 @@
     font-family: "Century Gothic", CenturyGothic;
     font-size: 20px;
     border: none;
-}
-
-.Create {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #f3eac2;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    color: #321f28;
-    
-}
-
-.RecipeFeature {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #f5b461;
-    height: auto;
-    font-size: 20px;
-    color: #321f28;
-    
 }

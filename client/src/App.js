@@ -11,6 +11,8 @@ import Donate from "./views/Donate/Donate";
 import Favorite from "./views/Favorite/Favorite";
 import NotFound from "./views/NotFound";
 import Header from "./components/Header/Header";
+import Dashboard from "./views/Dashboard/Dashboard";
+import ViewPost from "./views/Posts/ViewPost"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'semantic-ui-css/semantic.min.css'
 
@@ -29,6 +31,8 @@ const App = () => { //Git test
         <ProtectedRoute exact path="/Search" component={Search} />
         <ProtectedRoute exact path="/Donate" component={Donate} />
         <ProtectedRoute exact path="/Favorite" component={Favorite} />
+        <ProtectedRoute exact path="/Dashboard" component={Dashboard} />
+        <ProtectedRoute path="/Dashboard/:postID" component={ViewPost} />
         <Route component={NotFound}/>
       </Switch>
     </div>

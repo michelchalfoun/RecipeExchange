@@ -15,7 +15,7 @@ ReactDOM.render(
             domain={config.domain}
             clientId={config.clientId}
             //Go to utils/authConfig.js and change the redirectURI to change the page that the user is brought to when first logged in.
-            redirectUri={config.redirectURI}
+            redirectUri={window.location.origin + "/Profile"} //window.location.origin
         >
             <App />
         </Auth0Provider>

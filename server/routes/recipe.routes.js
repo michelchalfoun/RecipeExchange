@@ -63,5 +63,17 @@ router.route('/delete/:id').delete((req, res, next) => {
     })
 })
 
+=======
+router.route('/:postID').get( async (req, res) => {
+    recipe.findOne( {_id: req.params.postID }, (error, data) => {
+        if (error) {
+            return next(error)
+        } else {
+            res.json(data)
+        }
+    })
+})
+
+  
 
 module.exports = router;

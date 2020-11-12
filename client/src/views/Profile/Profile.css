@@ -1,0 +1,113 @@
+
+.Button {
+    background-color: #321f28;
+    color: #9ad3bc;
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+}
+
+.Border {
+    text-align: center;
+    background-color: #ec524b;
+    height: 40px;
+
+}
+
+.BorderG { /*green border*/
+    text-align: center;
+    background-color: #9ad3bc;
+    height: 40px;
+
+}
+
+.Sidebar {
+    height: 100%;
+    padding-top: 100px;
+    width:25%;
+    background-color: #f5b461;
+    font-size: 0px;
+    color: #321f28;
+    position: fixed;
+    margin: auto;
+    overflow-x: hidden;
+
+}
+
+.Main {
+    width: 75%;
+    height: auto;
+    margin-left: 25%;
+    background-color: #f3eac2;
+    font-size: 0px;
+    color: #321f28;
+
+}
+
+.Top {
+    height: 100px;
+    background-color: #321f28;
+    text-align: left;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+}
+
+.Recipee {
+    height: auto;
+    padding-top: 100px;
+    background-color: #f3eac2;
+    font-size: 0px;
+    color: #321f28;
+    
+
+}
+
+.BorderG {
+    text-align: center;
+    background-color: #ec524b;
+    height: 40px;
+
+}
+
+
+.Bigtext{
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 50px;
+    display: block;
+    color: #9ad3bc;
+}
+
+.Smalltext{
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    
+}
+
+.SideText{
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    
+}
+.Link {
+    color: #321f28;
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 20px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+#User{
+    height: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}

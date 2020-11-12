@@ -27,7 +27,7 @@ class SimpleMap extends Component {
                     lng: position.coords.longitude
                 }
             })
-            axios.get('http://localhost:5000/charity/getCharities',
+            axios.get('/charity/getCharities',
                 {
                     params: {
                         coordinates: String(position.coords.latitude) + ',' + String(position.coords.longitude)
