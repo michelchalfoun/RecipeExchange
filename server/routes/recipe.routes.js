@@ -17,6 +17,7 @@ router.route('/').get((req, res) => {
 router.route('/create').post((req, res, next) => {
     recipe.create(req.body, (error, data) => {
         if (error) {
+
             return next(error)
         } else {
             console.log(data)
@@ -62,5 +63,5 @@ router.route('/delete/:id').delete((req, res, next) => {
     })
 })
 
-  
+
 module.exports = router;

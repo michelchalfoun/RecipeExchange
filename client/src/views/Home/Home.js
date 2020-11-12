@@ -12,6 +12,8 @@ function Home() {
                     Welcome to Recipe Exchange. The world's simplest recipe sharing website.
                 </p>
             </header>
+            <div>
+            </div>
         </div>
     );
 }
