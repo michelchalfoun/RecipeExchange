@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Jumbotron } from 'react-bootstrap'
-//import { useAuth0 } from '@auth0/auth0-react';
 import CreateUser from '../../components/Users/create-user.component'
+import axios from 'axios';
+import { useAuth0 } from '@auth0/auth0-react';
+import { useHistory } from "react-router-dom";
 
 function Signup() {
-    //const { user } = useAuth0();
-    //const emailString = user.email
+
+    const { user } = useAuth0();
+    const history = useHistory();
+    
+    useEffect(() => {
+        axios.get('http://localhost:5000/users/' + user.name)
+        .then(res =>{
+            if(res.data != null) {history.push('/Profile')}})
+        .catch(err =>console.log(err));
+        }, [user.name]);
+
     return (
         <div >
-            {/* <form method="POST" action="/Signup" id="userinput">
-                <label>Email:</label>
-                <br></br>
-                <input type="text" name="email" value="testemail" readOnly></input>
-                <label>Username:</label>
-                <br></br>
-                <input type="text" name="username" required></input>
-                <br></br>
-                <input type="submit" value="SetUsername" className="submitButton"></input>
-            </form>*/}
             <Jumbotron>
             <h1>
                     Signup Page

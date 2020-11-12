@@ -17,6 +17,7 @@ router.route('/').get((req, res) => {
 router.route('/create').post((req, res, next) => {
     recipe.create(req.body, (error, data) => {
         if (error) {
+
             return next(error)
         } else {
             console.log(data)
@@ -62,6 +63,7 @@ router.route('/delete/:id').delete((req, res, next) => {
     })
 })
 
+=======
 router.route('/:postID').get( async (req, res) => {
     recipe.findOne( {_id: req.params.postID }, (error, data) => {
         if (error) {
@@ -73,4 +75,5 @@ router.route('/:postID').get( async (req, res) => {
 })
 
   
+
 module.exports = router;
