@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 
 
 
+
 function CreatePost() {
 
     const { user } = useAuth0();
@@ -28,57 +29,63 @@ function CreatePost() {
                 setFailMsg(true)
                 setSuccessMsg(false)
             });
-        };
 
-    render() {
-        return (
-            <div className="wrapper">
-                <form onSubmit={this.onSubmit}>
-                    <div className="form-group"> {/*title and cook time*/}
-                        <label className="label">Title:</label>
-                        <input type="text" value={this.state.title} onChange={this.onChangeTitle} className="titlebox" />
-                        <label className="label">Estimated Prep/Cook Time:</label>
-                        <div>
-                            <select className="dropdown" id="cooktime" form="recipeinput" type="number" name="cooktime" value={this.state.estimateTime} onChange={this.onChangeEstimateTime}>
-                                <option value="5-10 Minutes" label="5-10 Minutes"></option>
-                                <option value="10-15 Minutes" label="10-15 Minutes"></option>
-                                <option value="20-30 Minutes" label="20-30 Minutes"></option>
-                                <option value="30-60 Minutes" label="30-60 Minutes"></option>
-                                <option value="1+ Hour" label="1+ Hour"></option>
-                            </select>
-                        </div>
-                    </div>
-
-                {/*Description*/}
-                    <div className="form-group2">
-                        <label className= "label">Description:</label>
-                        <textarea value={this.state.description} onChange={this.onChangeDescription} className="longtextbox" />
-                    </div>
-                    <div className="form-group">
-                        
-                {/*Ingredients*/}
-                    </div>
-                    <div className="form-group2">
-                        <label className= "label">Ingredients:</label>
-                        <textarea value={this.state.ingredients} onChange={this.onChangeIngredients} className="longtextbox" />
-                    </div>
-
-                {/*Instructions*/}
-                    <div className="form-group2">
-                        <label className= "label">Instructions:</label>
-                        <textarea value={this.state.instructions} onChange={this.onChangeInstructions} className="longtextbox" />
-                    </div>
-
-                {/*Submit*/}
-                    <div className="form-group">
-                        <input type="submit" value="Create Recipe" className="bttn" />
-                    </div>
-
-                </form>
-            </div>
-        )
     }
-    
+
+    return (
+        <div className="wrapper">
+            <form onSubmit={onSubmit}>
+
+            {/*title and cook time*/}
+
+                <div className="form-group">
+                    <label className = "label">Title: *</label>
+                    <input type="text" value={postInfo.title} onChange={e => setPostInfo({...postInfo, title: e.target.value, author: user.name})} className="titlebox" required />
+                    <label className = "label">Estimated Prep/Cook Time: *</label>
+                    <div>
+                        <select className="dropdown" id="cooktime" form="recipeinput" type="number" name="cooktime" value={postInfo.estimateTime} onChange={e => setPostInfo({...postInfo, estimateTime: e.target.value})}>
+                            <option value="5-10 Minutes" label="5-10 Minutes"></option>
+                            <option value="10-15 Minutes" label="10-15 Minutes"></option>
+                            <option value="20-30 Minutes" label="20-30 Minutes"></option>
+                            <option value="30-60 Minutes" label="30-60 Minutes"></option>
+                            <option value="1+ Hour" label="1+ Hour"></option>
+                        </select>
+                    </div>
+                </div>
+
+            {/*Description*/}
+
+                <div className="form-group2">
+                    <label>Description: *</label>
+                    <textarea value={postInfo.description} onChange={e => setPostInfo({...postInfo, description: e.target.value})} className="longtextbox" required/>
+                </div>
+
+            {/*Ingredients*/}
+                <div className="form-group2">
+                    <label>Ingredients: *</label>
+                    <textarea value={postInfo.ingredient} onChange={e => setPostInfo({...postInfo, ingredients: e.target.value})} className="longtextbox" required/>
+                </div>
+
+            {/*Instructions*/}
+                <div className="form-group2">
+                    <label>Instructions: *</label>
+                    <textarea value={postInfo.instructions} onChange={e => setPostInfo({...postInfo, instructions: e.target.value})} className="longtextbox" required/>
+                </div>
+
+            {/*Submit*/}
+                <div className="form-group">
+                    <input type="submit" value="Create Recipe" className="bttn" />
+                </div>
+            </form>
+            {successMsg &&
+                 <a class="ui green label">Your recipe was successfully posted!</a>
+            }
+            {failMsg &&
+                <a class="ui red label">Your recipe has already been posted!</a>
+            }
+        </div>
+
+    )
 }
 
 export default CreatePost

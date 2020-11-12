@@ -50,8 +50,7 @@ function Create() {
                 </p>
                  <p>
                     Fill in the details of your recipe below! 
-                </p> 
-                <h4>All fields marked with * are required.</h4>    
+                </p>     
            </div>
 
             <div className="Border">
@@ -69,7 +68,7 @@ function Create() {
                 </p>
             </div>
         </div>
-            
+
 
     );
 }

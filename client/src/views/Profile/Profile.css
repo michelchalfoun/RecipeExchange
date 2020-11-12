@@ -1,4 +1,11 @@
 
+.App {
+    text-align: center;
+    background-color: #f3eac2;
+    height: auto;
+}
+
+
 .Button {
     background-color: #321f28;
     color: #9ad3bc;

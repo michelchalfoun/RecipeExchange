@@ -1,0 +1,46 @@
+
+.App{
+    text-align: center;
+    background-color: #f3eac2;
+    font-size: 0px;
+}
+
+.Header {
+    background-color: #321f28;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    font-family: "Century Gothic", CenturyGothic;
+}
+
+.Border {
+    text-align: center;
+    background-color: #ec524b;
+    height: 40px;
+
+}
+
+.Sidebar {
+    height: 100%;
+    padding-top: 100px;
+    width:25%;
+    background-color: #ec524b;
+    font-size: 0px;
+    color: #321f28;
+    position: fixed;
+    margin: auto;
+    overflow-x: hidden;
+
+}
+
+.SideText{
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    
+}
