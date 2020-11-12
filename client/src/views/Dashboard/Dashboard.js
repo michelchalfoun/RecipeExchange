@@ -5,14 +5,25 @@ import "./Dashboard.scss"
 
 function Dashboard() {
     return (
-        <Jumbotron>
-            <div className="Display">
-                <h1>Posted Recipes</h1>
+        <div className = "App2">
+            <div className="Header">
                 <p>Scroll to view previously posted recipes!</p>
             </div>
-            <hr></hr>
+
+            <div className="Border">
+                <p>
+                aaaa
+                </p>
+            </div>
+
             <DisplayPost> </DisplayPost>
-        </Jumbotron>
+
+            <div className="Border">
+                <p>
+                aaaa
+                </p>
+            </div>
+        </div>
     );
 }
 

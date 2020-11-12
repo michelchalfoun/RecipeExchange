@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './create-post.component.css'
 import { useAuth0 } from '@auth0/auth0-react';
 import { useHistory } from "react-router-dom";
+
 
 
 
@@ -34,12 +36,12 @@ function CreatePost() {
         <div className="wrapper">
             <form onSubmit={onSubmit}>
                 <div className="form-group">
-                    <label>Title: *</label>
-                    <input type="text" value={postInfo.title} onChange={e => setPostInfo({...postInfo, title: e.target.value, author: user.name})} className="form-control" required />
+                    <label className>Title: *</label>
+                    <input type="text" value={postInfo.title} onChange={e => setPostInfo({...postInfo, title: e.target.value, author: user.name})} className="titlebox" required />
                 </div>
-                <div className="form-group">
+                <div className="form-group2">
                     <label>Description: *</label>
-                    <input type="text" value={postInfo.description} onChange={e => setPostInfo({...postInfo, description: e.target.value})} className="form-control" required/>
+                    <input type="text" value={postInfo.description} onChange={e => setPostInfo({...postInfo, description: e.target.value})} className="longtextbox" required/>
                 </div>
                 <div className="form-group">
                     <label>Estimated Prep/Cook Time: *</label>
@@ -53,16 +55,16 @@ function CreatePost() {
                         </select>
                     </div>
                 </div>
-                <div className="form-group">
+                <div className="form-group2">
                     <label>Ingredients: *</label>
-                    <input type="text" value={postInfo.ingredient} onChange={e => setPostInfo({...postInfo, ingredients: e.target.value})} className="form-control" required/>
+                    <input type="text" value={postInfo.ingredient} onChange={e => setPostInfo({...postInfo, ingredients: e.target.value})} className="longtextbox" required/>
                 </div>
-                <div className="form-group">
+                <div className="form-group2">
                     <label>Instructions: *</label>
-                    <input type="text" value={postInfo.instructions} onChange={e => setPostInfo({...postInfo, instructions: e.target.value})} className="form-control" required/>
+                    <input type="text" value={postInfo.instructions} onChange={e => setPostInfo({...postInfo, instructions: e.target.value})} className="longtextbox" required/>
                 </div>
                 <div className="form-group">
-                    <input type="submit" value="Create Recipe" className="btn btn-success btn-block" />
+                    <input type="submit" value="Create Recipe" className="bttn" />
                 </div>
             </form>
             {successMsg &&
