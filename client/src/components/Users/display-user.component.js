@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import user from '../../assets/user_place.png'
 import { useAuth0 } from '@auth0/auth0-react';
 import './display-user.component.css';
@@ -23,6 +24,8 @@ export default function User () {
         <div className = "App">
             <div className = "Sidebar">
 
+                <img src={user} id = "User" />
+
                 <h2>User Information</h2>
                 <h1 className = "SideText">
                     User Name: {userInfo.username}
@@ -37,7 +40,7 @@ export default function User () {
                     Bio: {userInfo.bio}
                 </h1>
 
-            {/*<Button href="/EditProfile" variant="primary">Edit Profile</Button>*/}
+            <Link id="Edit" to='/EditProfile'>Edit Profile</Link>
 
 
             </div>

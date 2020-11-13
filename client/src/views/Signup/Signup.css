@@ -1,0 +1,47 @@
+.App2 {
+    text-align: center;
+    background-color: #f3eac2;
+    font-size: 0px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.Header {
+    background-color: #321f28;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    font-family: "Century Gothic", CenturyGothic;
+}
+
+.Border {
+    text-align: center;
+    background-color: #ec524b;
+    height: 40px;
+
+}
+
+/*.Create {
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}*/
+
+input {
+  border: none;
+  border-radius: 5px;
+}
+
+textarea {
+  border: none;
+  border-radius: 5px;
+}
+
+select {
+  border: none;
+  border-radius: 5px;
+}

@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom";
 
 
 
-
 function CreatePost() {
 
     const { user } = useAuth0();
@@ -42,7 +41,6 @@ function CreatePost() {
                     <label className = "label">Title: *</label>
                     <input type="text" value={postInfo.title} onChange={e => setPostInfo({...postInfo, title: e.target.value, author: user.name})} className="titlebox" required />
                     <label className = "label">Estimated Prep/Cook Time: *</label>
-
                     <div>
                         <select className="dropdown" id="cooktime" form="recipeinput" type="number" name="cooktime" value={postInfo.estimateTime} onChange={e => setPostInfo({...postInfo, estimateTime: e.target.value})}>
                             <option value="5-10 Minutes" label="5-10 Minutes"></option>
