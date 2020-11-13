@@ -9,7 +9,7 @@ function Profile() {
         <div className = "App" >
 
                 <User></User>
-                <Button href="/EditProfile" variant="primary">Edit Profile</Button>
+                {/*<Button href="/EditProfile" variant="primary">Edit Profile</Button>*/}
 
         </div>
     );

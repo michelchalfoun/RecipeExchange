@@ -4,6 +4,7 @@ import CreateUser from '../../components/Users/create-user.component'
 import axios from 'axios';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useHistory } from "react-router-dom";
+import './Signup.css'
 
 function Signup() {
 
@@ -18,13 +19,26 @@ function Signup() {
         }, [user.name]);
 
     return (
-        <div >
-            <Jumbotron>
-            <h1>
-                    Signup Page
-            </h1>
+        <div className = "App2">
+            <div className="Header" >
+                <p>
+                  Sign Up for an Account!
+                </p>    
+            </div>
+
+            <div className="Border">
+                <p>
+                  aaaa
+                </p>
+            </div>
+
                 <CreateUser></CreateUser>
-            </Jumbotron>
+
+            <div className="Border">
+                <p>
+                  aaaa
+                </p>
+            </div>
         </div> 
     );
 }

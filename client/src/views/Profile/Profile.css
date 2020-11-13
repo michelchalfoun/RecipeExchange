@@ -24,12 +24,6 @@
 
 }
 
-.BorderG { /*green border*/
-    text-align: center;
-    background-color: #9ad3bc;
-    height: 40px;
-
-}
 
 .Sidebar {
     height: 100%;
@@ -54,33 +48,6 @@
 
 }
 
-.Top {
-    height: 100px;
-    background-color: #321f28;
-    text-align: left;
-    padding-bottom: 20px;
-    padding-left: 20px;
-
-}
-
-.Recipee {
-    height: auto;
-    padding-top: 100px;
-    background-color: #f3eac2;
-    font-size: 0px;
-    color: #321f28;
-    
-
-}
-
-.BorderG {
-    text-align: center;
-    background-color: #ec524b;
-    height: 40px;
-
-}
-
-
 .Bigtext{
     font-family: "Century Gothic", CenturyGothic;
     font-size: 50px;
@@ -96,25 +63,4 @@
     
 }
 
-.SideText{
-    font-family: "Century Gothic", CenturyGothic;
-    font-size: 20px;
-    display: block;
-    text-align: center;
-    
-}
-.Link {
-    color: #321f28;
-    font-family: "Century Gothic", CenturyGothic;
-    font-size: 20px;
-    margin-left: 20px;
-    padding-bottom: 10px;
-}
 
-#User{
-    height: 120px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 20px;
-}

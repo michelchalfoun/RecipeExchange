@@ -44,3 +44,21 @@
     text-align: center;
     
 }
+
+#User{
+    height: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+#Edit {
+    color: white;
+    background-color: #321f28;
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}

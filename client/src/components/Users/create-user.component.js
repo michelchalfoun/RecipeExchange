@@ -39,23 +39,23 @@ function CreateUser() {
                     <h3>All fields marked with * are required.</h3>
                 </div>
                 <div className="form-group">
-                    <label>Username: *</label>
-                    <input type="text" placeholder="Please submit a username" value={userInfo.username} onChange={e => setUserInfo({ ...userInfo, username: e.target.value, email: user.email })} className="form-control" required />
+                    <label className = "label">Username: *</label>
+                    <input type="text" placeholder="Please submit a username" value={userInfo.username} onChange={e => setUserInfo({ ...userInfo, username: e.target.value, email: user.email })} className="titlebox" required />
                 </div>
                 <div className="form-group">
-                    <label>Where do you go to school? </label>
-                    <input type="text" placeholder="School" value={userInfo.school} onChange={e => setUserInfo({ ...userInfo, school: e.target.value })} className="form-control" />
+                    <label className = "label">School: </label>
+                    <input type="text" placeholder="Where do you go to school?" value={userInfo.school} onChange={e => setUserInfo({ ...userInfo, school: e.target.value })} className="titlebox" />
                 </div>
                 <div className="form-group">
-                    <label>Do you have a specific diet? </label>
-                    <input type="text" placeholder="Diet" value={userInfo.diet} onChange={e => setUserInfo({ ...userInfo, diet: e.target.value })} className="form-control" />
+                    <label className = "label" >Diet: </label>
+                    <input type="text" placeholder="Do you have a specific diet? (e.g. vegan, vegetarian, etc.)" value={userInfo.diet} onChange={e => setUserInfo({ ...userInfo, diet: e.target.value })} className="titlebox" />
                 </div>
                 <div className="form-group">
-                    <label>Share about yourself! </label>
-                    <input type="text" placeholder="Bio" value={userInfo.bio} onChange={e => setUserInfo({ ...userInfo, bio: e.target.value })} className="form-control" />
+                    <label className = "label">Bio: </label>
+                    <input type="text" placeholder="Share a little bit about yourself!" value={userInfo.bio} onChange={e => setUserInfo({ ...userInfo, bio: e.target.value })} className="titlebox" />
                 </div>
                 <div className="form-group">
-                    <input type="submit" value="Create Account" className="btn btn-success btn-block" />
+                    <input type="submit" value="Create Account" className="bttn" />
                 </div>
             </form>
             {successMsg &&
