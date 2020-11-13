@@ -13,7 +13,7 @@ export default function User () {
     const [userInfo, setUserInfo] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/users/' + user.name)
+        axios.get('/users/' + user.name)
         .then(res =>{
             if(res.data != null) {setUserInfo(res.data)}})
             .catch(err => console.log(err));

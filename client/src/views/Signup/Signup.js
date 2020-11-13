@@ -12,7 +12,7 @@ function Signup() {
     const history = useHistory();
     
     useEffect(() => {
-        axios.get('http://localhost:5000/users/' + user.name)
+        axios.get('/users/' + user.name)
         .then(res =>{
             if(res.data != null) {history.push('/Profile')}})
         .catch(err =>console.log(err));

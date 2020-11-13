@@ -16,7 +16,7 @@ function CreateUser() {
     const onSubmit = (e) => {
         e.preventDefault()
 
-        axios.post('http://localhost:5000/users/create', userInfo)
+        axios.post('/users/create', userInfo)
             .then(function (res) {
                 setFailMsg(false)
                 setSuccessMsg(true)

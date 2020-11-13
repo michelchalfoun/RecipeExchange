@@ -17,7 +17,7 @@ function CreatePost() {
     const onSubmit = (e) => {
         e.preventDefault()
 
-        axios.post('http://localhost:5000/posts/create', postInfo)
+        axios.post('/posts/create', postInfo)
             .then((res) => {
                 console.log(res.data)
                 setSuccessMsg(true)

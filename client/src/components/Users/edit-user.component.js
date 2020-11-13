@@ -14,7 +14,7 @@ export default function EditUser () {
 
     //Load userInfo right away
     useEffect(() => {
-        axios.get('http://localhost:5000/users/' + user.name)
+        axios.get('/users/' + user.name)
         .then(res =>{
             if(res.data != null) {setUserInfo(res.data)}})
             .catch(err => console.log(err));
@@ -24,7 +24,7 @@ export default function EditUser () {
     const onSubmit = (e) => {
         e.preventDefault()
 
-         axios.put('http://localhost:5000/users/edit/' + user.name, userInfo)
+         axios.put('/users/edit/' + user.name, userInfo)
             .then((res) => {
                 setSuccessMsg(true)
                 setTimeout( () => history.push('/Profile'), 3000)
