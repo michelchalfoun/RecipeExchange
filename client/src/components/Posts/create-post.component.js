@@ -23,7 +23,7 @@ function CreatePost() {
                 console.log(res.data)
                 setSuccessMsg(true)
                 setFailMsg(false)
-               // setTimeout( () => history.push(''), 3000)
+                setTimeout( () => history.push('Dashboard/' + res.data._id), 2000)
             }).catch((error) => {
                 console.log(error)
                 setFailMsg(true)
