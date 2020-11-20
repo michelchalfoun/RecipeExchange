@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AuthenticationButton from '../Auth/AuthenticationButton';
 import { Nav } from 'react-bootstrap'
 import Navbar from 'react-bootstrap/Navbar'
+import { useAuth0 } from '@auth0/auth0-react'
 
 const Header = () => {
+
+    const { user, isAuthenticated } = useAuth0();
+
+
     return (
         <div className='topnav'>
             <Navbar bg="light" expand="lg" sticky="top">
@@ -18,7 +23,9 @@ const Header = () => {
                         <Nav.Link href="/Search">Search</Nav.Link>
                     </Nav>
                     <Nav inline>
-                        <Nav.Link className="mr-auto" href="/Profile">My Profile</Nav.Link>
+                        {isAuthenticated &&
+                            <Nav.Link className="mr-auto" href={"/Profile/" + user.email}>My Profile</Nav.Link>
+                        }
                         <AuthenticationButton></AuthenticationButton>
                     </Nav>
                 </Navbar.Collapse>

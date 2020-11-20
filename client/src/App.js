@@ -12,7 +12,8 @@ import Favorite from "./views/Favorite/Favorite";
 import NotFound from "./views/NotFound";
 import Header from "./components/Header/Header";
 import Dashboard from "./views/Dashboard/Dashboard";
-import ViewPost from "./views/Posts/ViewPost"
+import ViewPost from "./views/Posts/ViewPost";
+import OtherProfile from "./views/Profile/OtherProfile";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'semantic-ui-css/semantic.min.css'
 
@@ -25,7 +26,7 @@ const App = () => { //Git test
         <Route exact path="/"><Redirect to="/Home" /></Route>
         <Route exact path="/Home" component={Home} />
         <ProtectedRoute exact path="/Signup" component={Signup} />
-        <ProtectedRoute exact path="/Profile" component={Profile} />
+        <ProtectedRoute exact path="/Profile/:email" component={Profile} />
         <ProtectedRoute exact path="/EditProfile" component={EditProfile} />
         <ProtectedRoute exact path="/CreateRecipe" component={Create} />
         <ProtectedRoute exact path="/Search" component={Search} />

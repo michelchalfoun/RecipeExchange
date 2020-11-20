@@ -73,6 +73,16 @@ router.route('/delete/:id').delete((req, res, next) => {
     })
 })
 
+router.route('/:email').get( async (req, res) => {
+    recipe.findOne( {_id: req.params.email }, (error, data) => {
+        if (error) {
+            return next(error)
+        } else {
+            res.json(data)
+        }
+    })
+})
+
 
 
 

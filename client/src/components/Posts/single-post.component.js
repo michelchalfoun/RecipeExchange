@@ -51,6 +51,7 @@ function SinglePost() {
         <div className="wrapper-users">
             <div className="container">
                 <h1>{postData.title}</h1>
+                <h2>Created by <a href={'/Profile/' + postData.author}>{postData.authorUsername}</a></h2>
                 <h3>{postData.description}</h3>
                 <h5>{"Cook Time: " + postData.estimateTime}</h5>
                 <ul>
