@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './create-post.component.css'
 import { useAuth0 } from '@auth0/auth0-react';
@@ -10,9 +10,24 @@ function CreatePost() {
 
     const { user } = useAuth0();
     const [postInfo, setPostInfo] = useState([]);
+    const [userInfo, setUserInfo] = useState([]);
     const [successMsg, setSuccessMsg] = useState(false);
     const [failMsg, setFailMsg] = useState(false);
     const history = useHistory();
+
+    useEffect(() => { 
+        setPostInfo({...postInfo, estimateTime: "5-10 Minutes"})
+        axios.get('/users/' + user.email) 
+            .then((res) => {
+                if(res.data != null) {
+                    setUserInfo(res.data)
+                }
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }, [user.email]);
+
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -39,7 +54,7 @@ function CreatePost() {
 
                 <div className="form-group">
                     <label className = "label">Title: *</label>
-                    <input type="text" value={postInfo.title} onChange={e => setPostInfo({...postInfo, title: e.target.value, author: user.name})} className="titlebox" required />
+                    <input type="text" value={postInfo.title} onChange={e => setPostInfo({...postInfo, title: e.target.value, author: user.name, authorUsername: userInfo.username})} className="titlebox" required />
                     <label className = "label">Estimated Prep/Cook Time: *</label>
                     <div>
                         <select className="dropdown" id="cooktime" form="recipeinput" type="number" name="cooktime" value={postInfo.estimateTime} onChange={e => setPostInfo({...postInfo, estimateTime: e.target.value})}>

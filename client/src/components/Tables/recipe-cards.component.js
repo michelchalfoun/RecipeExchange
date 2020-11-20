@@ -17,14 +17,13 @@ class RecipeCards extends Component {
             <article>
 
                 <h2>{this.props.obj.title}</h2>
-
                 <ul>
-                    <li><span class="icon icon-users"></span><span>1</span></li>
-                    <li><span class="icon icon-clock"></span><span>{this.props.obj.estimateTime}</span></li>
+                    <li><span class="icon icon-users"></span></li>
+                    <li><span class="icon icon-clock"></span><h6>{this.props.obj.estimateTime}</h6></li>
                 </ul>
-
-                <p><b>Description: </b>{this.props.obj.description}</p>
-
+                <a href={'/Profile/' + this.props.obj.author}>
+                    <h6>{this.props.obj.authorUsername}</h6>
+                </a>
                 
 
             </article>

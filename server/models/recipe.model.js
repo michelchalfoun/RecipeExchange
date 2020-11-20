@@ -9,7 +9,8 @@ let recipeSchema = new Schema({
     ingredients: { type: String, required: true },
     instructions: { type: String, required: true },
     date: { type: Date, default: Date.now() },
-    author: { type: String, required: true }
+    author: { type: String, required: true },
+    authorUsername: {type: String, required: true}
 },
     { collection: 'recipes' }
 )

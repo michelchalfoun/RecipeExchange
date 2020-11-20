@@ -14,7 +14,7 @@ function Signup() {
     useEffect(() => {
         axios.get('/users/' + user.name)
         .then(res =>{
-            if(res.data != null) {history.push('/Profile')}})
+            if(res.data != null) {history.push('/Profile/' + user.name)}})
         .catch(err =>console.log(err));
         }, [user.name]);
 

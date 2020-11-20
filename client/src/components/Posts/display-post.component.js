@@ -12,7 +12,9 @@ export default class DisplayPosts extends Component {
     componentDidMount() {
         axios.get('/posts')
             .then(res => {
-                this.setState({ postsCollection: res.data });
+                if(res.data != null) {
+                    this.setState({ postsCollection: res.data });
+                }
             })
             .catch(function (error) {
                 console.log(error);
