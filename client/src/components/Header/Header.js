@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import AuthenticationButton from '../Auth/AuthenticationButton';
-import { Nav } from 'react-bootstrap'
-import Navbar from 'react-bootstrap/Navbar'
+import { Nav, Image } from 'react-bootstrap'
+import Navbar  from 'react-bootstrap/Navbar'
 import { useAuth0 } from '@auth0/auth0-react'
+import mainLogo from'../../assets/Logo-whisk-right.png';
 
 const Header = () => {
 
@@ -12,7 +13,9 @@ const Header = () => {
     return (
         <div className='topnav'>
             <Navbar bg="light" expand="lg" sticky="top">
-                <Navbar.Brand href="/Home">Recipe Exchange</Navbar.Brand>
+                <Navbar.Brand href="/Home">
+                    <img  src={mainLogo} height={70} width={70} alt="fireSpot"/>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
