@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AuthenticationButton from '../Auth/AuthenticationButton';
-import { Nav, Image } from 'react-bootstrap'
-import Navbar  from 'react-bootstrap/Navbar'
+import { Nav } from 'react-bootstrap'
+import Navbar from 'react-bootstrap/Navbar'
 import { useAuth0 } from '@auth0/auth0-react'
 import mainLogo from'../../assets/Logo-whisk-right.png';
 
