@@ -2,6 +2,7 @@ import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap'
 import Card from "../../components/Card/Card"
 import './Favorite.css';
+import DisplayFavorites from "../../components/Posts/display-favorites.component.js"
 
 function Favorite() {
     return (
@@ -21,11 +22,7 @@ function Favorite() {
                 </p>
             </div>
 
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
+            <DisplayFavorites></DisplayFavorites>
 
             <div className="Border">
                 <p>

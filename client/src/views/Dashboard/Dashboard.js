@@ -7,7 +7,9 @@ function Dashboard() {
     return (
         <div className = "App2">
             <div className="Header">
-                <p>Scroll to view previously posted recipes!</p>
+                <p>Scroll to view posted recipes!</p>
+                <p>Have a recipe to share?</p>
+                <a href="/CreateRecipe">Create a Post!</a>
             </div>
 
             <div className="Border">

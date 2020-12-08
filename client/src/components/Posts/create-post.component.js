@@ -86,6 +86,10 @@ function CreatePost() {
                     <textarea value={postInfo.instructions} onChange={e => setPostInfo({...postInfo, instructions: e.target.value})} className="longtextbox" required/>
                 </div>
 
+                <div className="form-group3">
+                    <p>Entries marked with * are required.</p>
+                </div>
+
             {/*Submit*/}
                 <div className="form-group">
                     <input type="submit" value="Create Recipe" className="bttn" />

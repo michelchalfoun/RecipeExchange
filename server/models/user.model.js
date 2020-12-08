@@ -7,7 +7,8 @@ let userSchema = new Schema({
     email: {type: String, trim: true, unique: true},
     bio: {type: String, default: ''},
     school: {type: String, default: ''},
-    diet: {type: String, default: ''}
+    diet: {type: String, default: ''},
+    favorites: [String]
 },
     {collection: 'users'}
 )

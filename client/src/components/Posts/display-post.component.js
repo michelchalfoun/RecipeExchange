@@ -13,6 +13,7 @@ export default class DisplayPosts extends Component {
         axios.get('/posts')
             .then(res => {
                 if(res.data != null) {
+                    console.log(res.data)
                     this.setState({ postsCollection: res.data });
                 }
             })
@@ -22,6 +23,7 @@ export default class DisplayPosts extends Component {
     }
 
     recipeCards() {
+        console.log(this.state.postsCollection)
         return this.state.postsCollection.map((data, i) => {
             return <DataTable obj={data} key={i} />;
         });

@@ -21,7 +21,7 @@ function CreateUser() {
                 setFailMsg(false)
                 setSuccessMsg(true)
                 console.log(res.data)
-                setTimeout( () => history.push('/Profile/' + user.email), 3000)
+                setTimeout( () => history.push('/Profile/' + user.email), 2000)
             }).catch(function (error) {
                 setSuccessMsg(false)
                 setFailMsg(true)

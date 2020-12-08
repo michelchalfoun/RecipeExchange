@@ -49,10 +49,17 @@
     padding: 10px 0;
 }
 
+.form-group3{
+    font-family: "Century Gothic", CenturyGothic;
+    font-size: 24px;
+    color: #321f28;
+    padding: 5px 0;
+}
+
 .longtextbox{
     background-color: #f3eac2;
     margin-top: 10px;
-    height: 300px;
+    height: 150px;
     width: 100%;
     font-family: "Century Gothic", CenturyGothic;
     font-size: 20px;
