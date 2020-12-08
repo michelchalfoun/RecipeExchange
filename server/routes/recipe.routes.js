@@ -5,13 +5,31 @@ const mongoose = require('mongoose');
 let recipe = require('../models/recipe.model.js');
 
 router.route('/').get((req, res) => {
-    recipe.find((error, data) => {
-        if (error) {
-            return next(error)
-        } else {
-            res.json(data)
-        }
-    })
+    recipe.find({}, (err, data) => {
+        if (err)
+          return res.status(200).send({
+            message: err.message || "An unknown error occurred",
+          });
+        res.json(data);
+      });
+})
+
+router.route('/search/:keyword').get((req, res) => {
+    recipe.find({$or:[
+        {title : {'$regex': req.params.keyword, $options:'i'}},
+        {author : {'$regex' : req.params.keyword, $options:'i'}},
+        {authorUsername : {'$regex' : req.params.keyword, $options:'i'}},
+        {description : {'$regex' : req.params.keyword, $options:'i'}},
+        {ingredients : {'$regex' : req.params.keyword, $options:'i'}},
+        {instructions : {'$regex' : req.params.keyword, $options:'i'}},
+        {estimateTime : {'$regex' : req.params.keyword, $options:'i'}}
+    ]}, (err, data) => {
+        if (err)
+          return res.status(200).send({
+            message: err.message || "An unknown error occurred",
+          });
+        res.json(data);
+      });
 })
 
 router.route('/create').post((req, res, next) => {

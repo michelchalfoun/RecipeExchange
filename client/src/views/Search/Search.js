@@ -1,5 +1,7 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap'
+import DisplaySearch from "../../components/Posts/display-search.component"
+
 
 function Search() {
     return (
@@ -9,6 +11,8 @@ function Search() {
                 <p>This is where you will search for recipes.</p>
                 <Button href="/Home" variant="primary">Go back home</Button>
             </Jumbotron>
+            
+            <DisplaySearch></DisplaySearch>
         </div>
     );
 }
