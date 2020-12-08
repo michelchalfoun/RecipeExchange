@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Button from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
-import user from '../../assets/user_place.png'
+import userImg from '../../assets/user_place.png'
 import { useAuth0 } from '@auth0/auth0-react';
 import './display-user.component.css';
 
@@ -32,11 +32,11 @@ export default function User() {
         <div className="App">
             <div className="Sidebar">
 
-                <img src={user} id="User" />
+                <img src={userImg} id="User" />
 
                 <h2>User Information</h2>
                 <h1 className="SideText">
-                    User Name: {userInfo.username}
+                    Username: {userInfo.username}
                 </h1>
                 <h1 className="SideText">
                     Email: {userInfo.email}

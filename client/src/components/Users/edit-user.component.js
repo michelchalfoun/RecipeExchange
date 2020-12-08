@@ -27,7 +27,7 @@ export default function EditUser () {
          axios.put('/users/edit/' + user.name, userInfo)
             .then((res) => {
                 setSuccessMsg(true)
-                setTimeout( () => history.push('/Profile'), 3000)
+                setTimeout( () => history.push('/Profile/' + user.email), 2000)
                 console.log(res.data)
             }).catch((error) => {
                 console.log(error)
@@ -56,7 +56,7 @@ export default function EditUser () {
             {/*Submit or Cancel*/}
                 <div className="form-group">
                     <input type="submit" value="Update Profile" className="bttn" />
-                    <Link className = "bttn" to='/Profile'>Cancel</Link>
+                    <Link className = "bttn" to={'/Profile/' + user.email}>Cancel</Link>
                 </div>
 
             </form>

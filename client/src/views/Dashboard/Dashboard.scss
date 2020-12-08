@@ -9,6 +9,12 @@
     height: auto;
 }
 
+.Create {
+  text-align: center;
+  background-color: #f3eac2;
+  font-size: 12px;
+}
+
 html {
   height: 100%;
 }
@@ -29,7 +35,7 @@ img {
   background: #fff;
   margin: 4em auto;
   width: 90%;
-  max-width: 496px;
+  max-width: 596px;
   border-radius: 5px;
   //@include border-bottom-radius(5px);
 
@@ -41,7 +47,7 @@ img {
     }
 
     .button {
-      background: #57abf2;
+      background: #321f28;
       display: inline-block;
       position: absolute;
       top: 80%;
@@ -65,7 +71,7 @@ img {
   }
 
   article {
-    padding: 1.25em 1.5em;
+    padding: 3em 2em;
 
     ul {
       list-style: none;
@@ -97,6 +103,10 @@ img {
     h3 {
       margin: 0;
       font-weight: 300;
+    }
+
+    .username {
+      color: #222222;
     }
 
     h2 {
@@ -145,6 +155,7 @@ img {
     background-position: 0 -19px;
     width: 20px;
     height: 20px;
+    color: #321f28;
   }
 
   .icon-level,
@@ -156,15 +167,15 @@ img {
 
   .icon-play,
   .icon-play\:regular {
-    background-position: 0 -58px;
+    background-position: 1px -58px;
     width: 21px;
     height: 26px;
   }
 
-  .icon-users,
-  .icon-users\:regular {
-    background-position: 0 -84px;
-    width: 18px;
-    height: 18px;
-  }
+  // .icon-users,
+  // .icon-users\:regular {
+  //   background-position: 0 -84px;
+  //   width: 18px;
+  //   height: 18px;
+  // }
 }
