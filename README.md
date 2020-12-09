@@ -1,4 +1,4 @@
-# RecipeExchange - By Bears. Bits. Binary.
+# RecipeExchange :fork_and_knife: - By Bears. Bits. Binary.
 ### Introduction:
 Food waste is a current and major issue in the world we live in. About 35% of food produced ends up being wasted in the United States alone. At the same time, most charities and food banks around us are in constant need of food supply in order to feed people in need.
 As the Bears. Bits. Binary. group, we chose to work on a project that would bridge the gap between the countless amounts of food that is discarded everyday and the places in dire need of meals.
