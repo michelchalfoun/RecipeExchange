@@ -3,12 +3,12 @@
    background-color: #f5b461;
    width: 100%;
    padding: 10px;
-   align-items:left;
+   align-content:left;
 }
 
 .container{
    background-color: #f5b461;
-   height: 2000px;
+   height: auto;
    width: 100%;
     padding: 10px;
     display: flex;
