@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import DataTable from '../Tables/recipe-cards.component';
+import './display-post.component.css'
 
 export default class DisplayPosts extends Component {
 
