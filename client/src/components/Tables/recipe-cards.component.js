@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Image} from 'semantic-ui-react';
 
 
 class RecipeCards extends Component {
@@ -8,8 +7,8 @@ class RecipeCards extends Component {
             <div class="recipe-card">
 
             <aside>
-
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/oatmeal.jpg" style={{width: 450, height: 150}} alt="Chai Oatmeal" />
+                
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/oatmeal.jpg" alt="Chai Oatmeal" />
 
                 <a href={"/Dashboard/" + this.props.obj._id} class="button"><span class="icon icon-play"></span></a>
 
@@ -22,8 +21,9 @@ class RecipeCards extends Component {
                     <li><span class="icon icon-users"></span></li>
                     <li><span class="icon icon-clock"></span><h6>{this.props.obj.estimateTime}</h6></li>
                 </ul>
+
                 <a href={'/Profile/' + this.props.obj.author}>
-                    <h6>{this.props.obj.authorUsername}</h6>
+                    <h3>{this.props.obj.authorUsername}</h3>
                 </a>
                 
 
