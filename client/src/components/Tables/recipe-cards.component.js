@@ -8,8 +8,10 @@ class RecipeCards extends Component {
             
             <aside>
                 
-                <img class= "template" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/oatmeal.jpg" alt="Chai Oatmeal" />
-                
+
+                <img class="resize" src={this.props.obj.img} alt="Chai Oatmeal" />
+
+
             </aside>
 
             <div class = "card-text">

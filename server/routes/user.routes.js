@@ -37,7 +37,7 @@ router.route('/create').post((req, res, next) => {
 });
 
 router.route('/edit/:email').put( async (req, res) => {
-    user.updateOne({email: req.params.email}, {$set: {school: req.body.school, diet: req.body.diet, bio: req.body.bio}}, (error, data) => {
+    user.updateOne({email: req.params.email}, {$set: {school: req.body.school, diet: req.body.diet, bio: req.body.bio, img: req.body.img}}, (error, data) => {
         if (error) {
             return next(error)
         } else {

@@ -14,6 +14,7 @@ import Header from "./components/Header/Header";
 import Dashboard from "./views/Dashboard/Dashboard";
 import ViewPost from "./views/Posts/ViewPost";
 import OtherProfile from "./views/Profile/OtherProfile";
+import EditPost from "./views/Posts/EditPost";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'semantic-ui-css/semantic.min.css'
 
@@ -34,6 +35,7 @@ const App = () => { //Git test
         <ProtectedRoute exact path="/Favorite" component={Favorite} />
         <ProtectedRoute exact path="/Dashboard" component={Dashboard} />
         <ProtectedRoute path="/Dashboard/:postID" component={ViewPost} />
+        <ProtectedRoute path="/edit/:postID" component={EditPost} />
         <Route component={NotFound}/>
       </Switch>
     </div>

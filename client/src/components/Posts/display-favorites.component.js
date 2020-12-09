@@ -33,6 +33,7 @@ function DisplayFavorites() {
 
 
     const recipeCards = () => {
+        console.log(postCollection)
         return postCollection.map((data, i) => {
             return <DataTable obj={data} key={i} />;
         });

@@ -11,7 +11,8 @@ let recipeSchema = new Schema({
     date: { type: Date, default: Date.now() },
     author: { type: String, required: true },
     authorUsername: {type: String, required: true},
-    favorited: { type: Number, min: 0, default: 0}
+    favorited: { type: Number, min: 0, default: 0},
+    img: {type: String, default: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/oatmeal.jpg"}
 },
     { collection: 'recipes' }
 )
