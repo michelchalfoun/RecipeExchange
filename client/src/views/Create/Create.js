@@ -45,12 +45,12 @@ function Create() {
         // </div>
         <div className = "App2">
             <div className="Header" >
-                <p>
-                    Create a Recipe Post
-                </p>
                  <p>
                     Fill in the details of your recipe below! 
-                </p>     
+                </p>   
+                <p>
+                    * = required field 
+                </p>    
            </div>
 
             <div className="Border">

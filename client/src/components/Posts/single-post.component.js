@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
 import { useHistory } from "react-router-dom";
-
+import './single-post.component.css'
 
 
 function SinglePost() {
@@ -122,19 +122,49 @@ function SinglePost() {
 
 
     return (
-        <div className="wrapper-users">
-            <div className="container">
+        <div className="wrapper-users2">
+            <div className="Header">
+                 <p>
+                    <p id = "pagetitle">{postData.title}</p>
+                </p>    
+           </div>
+
+            <div className="Border">
+                <p>
+                     
+                </p>
+            </div>
+
+            <div className="container2">
 
                 {/* All relevant post details that need to be formatted */}
-                <h1>{postData.title}</h1>
-                <h2>Created by <a href={'/Profile/' + postData.author}>{postData.authorUsername}</a></h2>
-                <h3>{postData.description}</h3>
-                <h5>{"Cook Time: " + postData.estimateTime}</h5>
-                <ul>
-                    <li>{"Ingredients: " + postData.ingredients}</li>
-                    <li>{"Instructions:  " + postData.instructions}</li>
-                </ul>
-                <p><b>Favorited by: </b> {postData.favorited + " Users"}</p>
+                
+                <div id = "green">
+                    <p id = "created"><b>Created by: </b><a href={'/Profile/' + postData.author}>{postData.authorUsername}</a></p>
+                    
+                </div>
+                <div id = "important_info">
+                    <p class = "mini_text"><b>Cook Time: </b>{postData.estimateTime}</p>
+                    <p class = "mini_text"><b>Favorited by: </b> {postData.favorited + " Users"}</p>
+                    {/* Filled star for when user has favorited */}
+                    <div id = "star">
+                    <p class = "mini_text"> <b> Favorite </b></p>
+                        {hasFavorited &&
+                            <i class="star icon" onClick={e => updateFavorites(e)}></i>
+                        }
+
+                        {/* Empty Star for before user has favorited the post */}
+                        {!hasFavorited &&
+                            <i class="star outline icon" onClick={e => updateFavorites(e)}></i>
+                        }
+                    </div>
+                </div>
+                <p class = "description">{postData.description}</p>
+                <h2>Ingredients</h2>
+                <p class = "description">{postData.ingredients}</p>
+
+                <h2>Instructions</h2>
+                <p class = "description">{postData.instructions}</p>
 
                 {/* If the user created the viewed post, they will be able to see and click a delete button. */}
                 {isAuthor &&
@@ -144,15 +174,7 @@ function SinglePost() {
                     </div>
                 }
 
-                {/* Filled star for when user has favorited */}
-                {hasFavorited &&
-                    <i class="star icon" onClick={e => updateFavorites(e)}></i>
-                }
 
-                {/* Empty Star for before user has favorited the post */}
-                {!hasFavorited &&
-                    <i class="star outline icon" onClick={e => updateFavorites(e)}></i>
-                }
 
 
                 {/* Status reporting messages for deleting posts. Only appear if user is the author or an admin andcan see delete button*/}
@@ -163,6 +185,12 @@ function SinglePost() {
                 {deleteFail &&
                     <a class="ui red label">Your post failed to delete properly!</a>
                 }
+            </div>
+
+            <div className="Border">
+                <p>
+                     
+                </p>
             </div>
         </div>
     )
