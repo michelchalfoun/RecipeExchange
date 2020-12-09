@@ -54,7 +54,7 @@ export default function User() {
     }
 
     return (
-        <div className>
+        <div>
             <div className="Sidebar">
 
                 <img class="resize1" src={userInfo.img} />
@@ -100,9 +100,11 @@ export default function User() {
 
                     <div className="wrapper-users">
                         <div className="container">
-                            {doneLoading &&
-                                recipeCards()
-                            }
+                            <div className="centerRecipes">
+                                {doneLoading &&
+                                    recipeCards()
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,9 +129,11 @@ export default function User() {
 
                     <div className="wrapper-users">
                         <div className="container">
-                            {doneLoading &&
-                                recipeCards()
-                            }
+                            <div className="centerRecipes">
+                                {doneLoading &&
+                                    recipeCards()
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>

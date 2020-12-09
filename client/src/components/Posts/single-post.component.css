@@ -20,12 +20,12 @@
 #pagetitle{
     text-align: center;
     color: white;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 70px;
 }
 #green{
     text-align: left;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     background-color: #9ad3bc;
     padding: 20px;
     border-radius: 10px;
@@ -33,7 +33,7 @@
 }
 #important_info{
     text-align: left;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     background-color: #f3eac2;
     width: 100%;
     padding: 20px;
@@ -59,7 +59,7 @@
 #created{
     text-align: left;
     color: #321f28;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 40px;
     font-weight: 500;
 }
@@ -67,7 +67,7 @@
 #cooked{
     text-align: left;
     color: #321f28;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 30px;
     font-weight: 500;
 }
@@ -75,7 +75,7 @@
 .description{
     text-align: left;
     color: #321f28;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 20px;
     background-color: #f3eac2;
     padding: 20px;
@@ -91,11 +91,11 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
 }
 
 .form-group7{
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 20px;
     color: #321f28;
     font-weight: bold;
@@ -103,7 +103,7 @@
 }
 
 .form-group6{
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 40px;
     color: #321f28;
     margin-left: 20px;
@@ -114,7 +114,7 @@
 .bttn2{
     border-radius: 10px;
     background-color: #9ad3bc;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 15px;
     font-weight: bold;
     color: #321f28;

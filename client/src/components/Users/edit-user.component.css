@@ -15,7 +15,7 @@
 }
 
 .form-group{
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 30px;
     color: #321f28;
     font-weight: bold;
@@ -24,7 +24,7 @@
 }
 
 .form-group2{
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 30px;
     color: #321f28;
     font-weight: bold;
@@ -36,7 +36,7 @@
     margin: 0 20px;
     height: 40px;
     flex-grow: 1;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 20px;
     color: #321f28;
 }
@@ -46,7 +46,7 @@
     margin-top: 10px;
     height: 150px;
     width: 100%;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 20px;
     color: #321f28;
     overflow: visible;
@@ -55,7 +55,7 @@
 
 .bttn{
     background-color: #9ad3bc;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     margin-right: 20px;
     border-radius: 10px;
     font-size: 20px;

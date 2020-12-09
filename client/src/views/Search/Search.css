@@ -1,7 +1,6 @@
-.App2 {
+.App3 {
     text-align: center;
     background-color: #f3eac2;
-    font-size: 0px;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -22,7 +21,8 @@
 .Border {
     text-align: center;
     background-color: #ec524b;
-    height: 20px;
+    font-size: 0px;
+    height: 40px;
 
 }
 
@@ -44,4 +44,9 @@ textarea {
 select {
   border: none;
   border-radius: 5px;
+}
+
+.submitButton {
+  background-color: dodgerblue;
+  color: white;
 }
