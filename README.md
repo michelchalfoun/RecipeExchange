@@ -35,4 +35,4 @@ https://recipe-exchange.herokuapp.com/Home
 4. Navigate to the directory of the cloned project (```cd``` command)
 5. While in the main directory (/RecipeExchange), run ```npm i```.
 6. Then, run ```npm run-script install-all```.
-7. Now that all the dependencies are downloaded, you can run the server/website on your local machine using ```npm run-scipt dev```.
+7. Now that all the dependencies are downloaded, you can run the server/website on your local machine using ```npm run-script dev```.
