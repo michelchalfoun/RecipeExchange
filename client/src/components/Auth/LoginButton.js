@@ -5,7 +5,7 @@ import { Nav } from 'react-bootstrap'
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
 
-  return <Nav.Link onClick={() => loginWithRedirect()}>Log In</Nav.Link>;
+  return <Nav.Link onClick={() => loginWithRedirect()}>- Log In / Sign up -</Nav.Link>;
 };
 
 export default LoginButton;

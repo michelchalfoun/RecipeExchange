@@ -1,33 +1,30 @@
 import React, { Component } from 'react';
-
+import './recipe-cards.component.css'
 
 class RecipeCards extends Component {
     render() {
         return (
-            <div class="recipe-card">
-
+            <div class= "recipe-card">
+            
             <aside>
                 
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/oatmeal.jpg" alt="Chai Oatmeal" />
-
-                <a href={"/Dashboard/" + this.props.obj._id} class="button"><span class="icon icon-play"></span></a>
-
+                <img class= "template" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/oatmeal.jpg" alt="Chai Oatmeal" />
+                
             </aside>
 
-            <article>
-
-                <h2>{this.props.obj.title}</h2>
-                <ul>
-                    <li><span class="icon icon-users"></span></li>
-                    <li><span class="icon icon-clock"></span><h6>{this.props.obj.estimateTime}</h6></li>
-                </ul>
-
-                <a href={'/Profile/' + this.props.obj.author}>
-                    <h3>{this.props.obj.authorUsername}</h3>
-                </a>
+            <div class = "card-text">
                 
+                <div class = "info">
+                    <h2 class = "recipe_title">{this.props.obj.title}</h2>
+                    <a href={'/Profile/' + this.props.obj.author}>
+                        <h3 class = "form-group5">By: {this.props.obj.authorUsername}</h3>
+                    </a>
+                    <h6 class = "form-group5">Cook Time: {this.props.obj.estimateTime}</h6>
+                </div>
 
-            </article>
+                <a href={"/Dashboard/" + this.props.obj._id} class="bttn2">See this recipe!</a>
+
+            </div>
 
             </div>
         );

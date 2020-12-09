@@ -19,15 +19,15 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/Dashboard">Home</Nav.Link>
-                        <Nav.Link href="/Favorite">Favorites</Nav.Link>
-                        <Nav.Link href="/Donate">Donate</Nav.Link>
-                        <Nav.Link href="/CreateRecipe">Create</Nav.Link>
-                        <Nav.Link href="/Search">Search</Nav.Link>
+                        <Nav.Link href="/Dashboard">- Home -</Nav.Link>
+                        <Nav.Link href="/Favorite">- Favorites -</Nav.Link>
+                        <Nav.Link href="/Donate">- Donate -</Nav.Link>
+                        <Nav.Link href="/CreateRecipe">- Create a Recipe -</Nav.Link>
+                        <Nav.Link href="/Search">- Search -</Nav.Link>
                     </Nav>
                     <Nav inline>
                         {isAuthenticated &&
-                            <Nav.Link className="mr-auto" href={"/Profile/" + user.email}>My Profile</Nav.Link>
+                            <Nav.Link className="mr-auto" href={"/Profile/" + user.email}>- My Profile -</Nav.Link>
                         }
                         <AuthenticationButton></AuthenticationButton>
                     </Nav>

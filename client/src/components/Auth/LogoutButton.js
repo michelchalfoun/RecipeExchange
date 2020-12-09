@@ -5,7 +5,7 @@ import { Nav } from 'react-bootstrap'
 const LogoutButton = () => {
   const { logout } = useAuth0();
 
-  return <Nav.Link onClick={() => logout({ returnTo: window.location.origin })}>Log Out</Nav.Link>
+  return <Nav.Link onClick={() => logout({ returnTo: window.location.origin })}>- Log Out -</Nav.Link>
 };
 
 export default LogoutButton;
