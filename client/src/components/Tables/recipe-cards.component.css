@@ -1,0 +1,6 @@
+img.resize {
+    width: 55vw; 
+    min-width: 330px;
+    height: 55vw;
+    max-height: 300px;
+}

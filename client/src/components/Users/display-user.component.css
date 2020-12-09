@@ -34,6 +34,8 @@
     position: fixed;
     margin: auto;
     overflow-x: hidden;
+    top: 0;
+    bottom: 0;
 
 }
 
@@ -42,7 +44,7 @@
     font-size: 20px;
     display: block;
     text-align: center;
-    
+    word-wrap: break-word;
 }
 
 #User{
@@ -61,4 +63,11 @@
     padding: 10px 20px;
     margin-top: 40px;
     border-radius: 10px;
+}
+
+img.resize1 {
+    width: 55vw; 
+    min-width: 300px;
+    height: 55vw;
+    max-height: 275px;
 }

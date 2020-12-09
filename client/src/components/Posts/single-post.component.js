@@ -65,6 +65,10 @@ function SinglePost() {
         axios.delete('/posts/delete/' + postData._id)
             .then(res => {
                 setDeleteSuccess(true);
+                if (userData.favorites.includes(postData._id)) {
+                    var index = userData.favorites.indexOf(postData._id)
+                    userData.favorites.splice(index, 1);
+                }
                 setTimeout(() => history.push('/Dashboard'), 2000)
             })
             .catch(function (error) {
@@ -134,7 +138,10 @@ function SinglePost() {
 
                 {/* If the user created the viewed post, they will be able to see and click a delete button. */}
                 {isAuthor &&
-                    <button class="ui red basic button" onClick={e => deletePost(e)}>Delete Post</button>
+                    <div>
+                        <button class="ui red basic button" onClick={e => deletePost(e)}>Delete Post</button>
+                        <a href={"/edit/" + postData._id} class="ui basic button">Edit Post</a>
+                    </div>
                 }
 
                 {/* Filled star for when user has favorited */}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./recipe-cards.component.css"
 
 
 class RecipeCards extends Component {
@@ -8,7 +9,7 @@ class RecipeCards extends Component {
 
             <aside>
                 
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/oatmeal.jpg" alt="Chai Oatmeal" />
+                <img class="resize" src={this.props.obj.img} alt="Chai Oatmeal" />
 
                 <a href={"/Dashboard/" + this.props.obj._id} class="button"><span class="icon icon-play"></span></a>
 

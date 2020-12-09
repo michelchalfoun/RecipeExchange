@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useHistory } from "react-router-dom";
+import "./create-user.component.css"
 
 function CreateUser() {
 
@@ -53,6 +54,10 @@ function CreateUser() {
                 <div className="form-group">
                     <label className = "label">Bio: </label>
                     <input type="text" placeholder="Share a little bit about yourself!" value={userInfo.bio} onChange={e => setUserInfo({ ...userInfo, bio: e.target.value })} className="titlebox" />
+                </div>
+                <div className="form-group">
+                    <label className = "label">Profile Picture (URL): </label>
+                    <input type="text" placeholder="Enter a valid URL link to your profile picture" value={userInfo.img} onChange={e => setUserInfo({ ...userInfo, img: e.target.value })} className="titlebox" />
                 </div>
                 <div className="form-group">
                     <input type="submit" value="Create Account" className="bttn" />

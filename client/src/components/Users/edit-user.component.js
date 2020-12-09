@@ -53,6 +53,11 @@ export default function EditUser () {
                     <textarea value={userInfo.bio} onChange={e => setUserInfo({...userInfo, bio: e.target.value})} className="longtextbox" />
                 </div>
 
+                <div className="form-group2">
+                    <label className = "label">Profile Picture (URL):</label>
+                    <textarea value={userInfo.img} onChange={e => setUserInfo({...userInfo, img: e.target.value})} className="longtextbox" />
+                </div>
+
             {/*Submit or Cancel*/}
                 <div className="form-group">
                     <input type="submit" value="Update Profile" className="bttn" />
