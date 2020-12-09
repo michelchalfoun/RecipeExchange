@@ -9,7 +9,7 @@
 .Button {
     background-color: #321f28;
     color: #9ad3bc;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 20px;
     padding: 5px;
     padding-left: 20px;
@@ -49,14 +49,14 @@
 }
 
 .Bigtext{
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 50px;
     display: block;
     color: #9ad3bc;
 }
 
 .Smalltext{
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 20px;
     display: block;
     text-align: center;

@@ -13,7 +13,7 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
 }
 
 
@@ -25,13 +25,13 @@
 }
 
 .BigText{
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 40px;
     color: #321f28;
 }
 
 .MidText{
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 30px;
     color: #321f28;
 }
@@ -40,7 +40,7 @@
     color: white;
     background-color: #321f28;
     padding: 10px 30px;
-    font-family: "Century Gothic", CenturyGothic;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
     font-size: 20px;
     border: none;
 }

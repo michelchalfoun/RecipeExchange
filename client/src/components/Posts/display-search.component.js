@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DataTable from '../Tables/recipe-cards.component';
 import { Input } from 'semantic-ui-react'
+import './display-search.component.css'
 
 export default class DisplaySearch extends Component {
 
@@ -52,10 +53,10 @@ export default class DisplaySearch extends Component {
     render() {
         return (
             <div className="wrapper-users">
-                <Input
+                <Input className="titlebox"
                     onChange={event => this.updateKeyword(event)}
                 ></Input>
-            <button class="ui button"
+            <button class="bttn"
                 onClick={() => this.updateSearchedRecipes()}
             >Search</button>
                 <div className="container">
